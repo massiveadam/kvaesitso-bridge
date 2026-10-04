@@ -1,0 +1,8 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="16dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/preview_app_one" android:textSize="14sp" android:textStyle="bold" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/preview_message_one" android:textSize="15sp" android:layout_marginTop="4dp" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/preview_app_two" android:textSize="14sp" android:textStyle="bold" android:layout_marginTop="18dp" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/preview_message_two" android:textSize="15sp" android:layout_marginTop="4dp" />
+</LinearLayout>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Kvaesitso Bridge</string>
+    <string name="widget_description">A quiet text feed of your notifications</string>
+    <string name="listener_label">Kvaesitso Bridge notification access</string>
+    <string name="widget_access">Notification access required</string>
+    <string name="widget_enable">Tap to enable</string>
+    <string name="widget_connecting">Connecting to notifications</string>
+    <string name="widget_connect_help">Tap to check access</string>
+    <string name="widget_hidden">All notification apps are hidden</string>
+    <string name="widget_settings">Tap to choose apps</string>
+    <string name="dismiss_notification">Dismiss notification from %1$s</string>
+    <string name="preview_app_one" translatable="false">Slack</string>
+    <string name="preview_message_one" translatable="false">Jess: Updated deck is ready</string>
+    <string name="preview_app_two" translatable="false">Messages</string>
+    <string name="preview_message_two" translatable="false">Meg: grabbing dinner now</string>
+</resources>
