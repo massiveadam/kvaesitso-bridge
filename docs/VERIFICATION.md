@@ -15,6 +15,8 @@ Result: `BUILD SUCCESSFUL`. 26 unit tests passed. Android lint reports `No issue
 
 The build emits a Gradle configuration deprecation from AGP's use of `Configuration.setVisible`. The pinned toolchain still builds successfully. It is unrelated to app code or Android lint.
 
+After publishing the repository, [GitHub's Android workflow](https://github.com/massiveadam/kvaesitso-bridge/actions/runs/37244547116) also passed the full build, unit tests and lint on Ubuntu 24.04 with Java 21. The initial SDK setup failure was fixed by updating the actions and requesting only supported SDK packages. Tagged releases now use a dedicated stable signing key, with package, version, certificate and alignment checks before publishing; see [RELEASING.md](RELEASING.md).
+
 ## Real Android checks
 
 Installed and launched the app on a disposable Android 17 emulator, API 37. The detected physical phone was unauthorized for ADB and was not used. The fixture posts real notifications through NotificationManager and renders the product through an ordinary AppWidgetHost. No test hooks alter the product repository.
@@ -63,4 +65,4 @@ Follow the [project verification skill](../.agents/skills/verify-kvaesitso-bridg
 
 ## Coverage limits
 
-A stock Kvaesitso installation and physical Pixel 10 Pro were not available for hands-on testing. Widget ID remapping through an Android backup restoration was not driven; it uses the stock Glance receiver's lifecycle. Lock redaction is unit-tested and reacts to system screen/lock events, but this run did not configure a secure lock screen. Launcher-cached RemoteViews can retain prior content until an asynchronous update, as documented in the README. GitHub Actions is configured but has not run on GitHub from this local workspace.
+A stock Kvaesitso installation and physical Pixel 10 Pro were not available for hands-on testing. Widget ID remapping through an Android backup restoration was not driven; it uses the stock Glance receiver's lifecycle. Lock redaction is unit-tested and reacts to system screen/lock events, but this run did not configure a secure lock screen. Launcher-cached RemoteViews can retain prior content until an asynchronous update, as documented in the README.

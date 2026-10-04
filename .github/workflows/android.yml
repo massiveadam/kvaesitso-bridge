@@ -85,6 +85,8 @@ jobs:
         run: |
           if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
             gh release upload "$GITHUB_REF_NAME" release/*.apk release/SHA256SUMS --clobber
+          elif [ -f "docs/releases/$GITHUB_REF_NAME.md" ]; then
+            gh release create "$GITHUB_REF_NAME" release/*.apk release/SHA256SUMS --verify-tag --latest --title "Kvaesitso Bridge ${GITHUB_REF_NAME#v}" --notes-file "docs/releases/$GITHUB_REF_NAME.md"
           else
             gh release create "$GITHUB_REF_NAME" release/*.apk release/SHA256SUMS --verify-tag --latest --title "Kvaesitso Bridge ${GITHUB_REF_NAME#v}" --generate-notes
           fi

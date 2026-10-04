@@ -10,7 +10,7 @@ If a debug build of Bridge is already installed, uninstall it once before instal
 
 1. Increase both `versionCode` and `versionName` in `app/build.gradle.kts`. Keep versionCode increasing.
 2. Commit and push to `main`. Wait for the Android workflow to pass.
-3. Create and push `vVERSION` matching versionName, for example `git tag v0.1.1` followed by `git push origin v0.1.1`.
+3. Optionally add release notes in `docs/releases/vVERSION.md`. Create and push `vVERSION` matching versionName, for example `git tag v0.1.1` followed by `git push origin v0.1.1`.
 4. The tag workflow builds, tests and lints, signs the verified release APK, checks package/version/certificate/alignment, and publishes it as a GitHub Release. Obtainium discovers that release.
 
 The signing key is held in GitHub Actions secrets `APK_SIGNING_KEYSTORE_BASE64` and `APK_SIGNING_PASSWORD`. Only the tag publishing job reads them. Pull request checks do not use signing secrets. No private key or password is stored in Git.
